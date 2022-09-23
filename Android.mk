@@ -1,5 +1,6 @@
 ifneq ($(AUDIO_USE_STUB_HAL), true)
 ifeq ($(TARGET_USES_QCOM_MM_AUDIO), true)
+ifneq ($(wildcard vendor/qcom/proprietary/args),)
 
 LOCAL_PATH := $(call my-dir)
 PAL_BASE_PATH := $(call my-dir)
@@ -240,4 +241,5 @@ include $(PAL_BASE_PATH)/ipc/HwBinders/Android.mk
 include $(PAL_BASE_PATH)/vui_dmgr/Android.mk
 
 endif #TARGET_USES_QCOM_MM_AUDIO
+endif # ifneq ($(wildcard vendor/qcom/proprietary/args),)
 endif #AUDIO_USE_STUB_HAL
