@@ -23,7 +23,6 @@ LOCAL_HEADER_LIBRARIES := \
 
 LOCAL_SHARED_LIBRARIES := \
     liblog \
-    libcutils \
-    liblx-osal
+    libcutils
 
 include $(BUILD_SHARED_LIBRARY)
